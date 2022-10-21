@@ -1,34 +1,33 @@
-const todoList = document.querySelector(".todo-list")
-const taskInput = document.querySelector("#taskInput")
-const addBtn = document.querySelector("#addBtn")
-const list = document.querySelector(".todo-list")
+const todoList = document.querySelector(".todo-list");
+const taskInput = document.querySelector("#taskInput");
+const addBtn = document.querySelector("#addBtn");
 
-resetInput()
+resetInput();
 
 // event delegation
 todoList.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
-    const btn = e.target
-    btn.parentElement.remove()
+    const btn = e.target;
+    btn.parentElement.remove();
   }
-})
+});
 
 addBtn.addEventListener("click", () => {
-  addTask(taskInput.value)
-})
+  addTask(taskInput.value);
+});
 
 taskInput.addEventListener("keydown", (e) => {
   if (e.code === "Enter") {
-    addTask(taskInput.value)
+    addTask(taskInput.value);
   }
-})
+});
 
 function addTask(taskContent = "") {
-  taskContent = taskContent.trim()
+  taskContent = taskContent.trim();
 
   if (taskContent !== "") {
-    createTaskElement(taskContent)
-    resetInput()
+    createTaskElement(taskContent);
+    resetInput();
   }
 }
 
@@ -36,12 +35,12 @@ function createTaskElement(task) {
   const taskElement = `<li class="todo-item">
         <span class="item">${task}</span>
         <button class="closeBtn">X</button>
-      </li>`
+      </li>`;
 
-  list.insertAdjacentHTML("afterbegin", taskElement)
+  todoList.insertAdjacentHTML("afterbegin", taskElement);
 }
 
 function resetInput() {
-  taskInput.value = ""
-  taskInput.focus()
+  taskInput.value = "";
+  taskInput.focus();
 }
