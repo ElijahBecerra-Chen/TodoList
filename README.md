@@ -10,9 +10,9 @@ _What have I learned in this couse?_
 * DOM manipulation
 * Difference between Node object and Element object
 
-  *Node methods & Element methods.
+  * Node methods & Element methods.
   
-  *DOM event flow (Event Bubbling & Event Capturing)
+  * DOM event flow (Event Bubbling & Event Capturing)
 
-  *Event Delegation
+  * Event Delegation
 * Functional programming
