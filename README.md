@@ -1,12 +1,12 @@
 
-# To-do list
+# 📕 To-do list
 
 **Study notes for this class** 
 
-`Writing with Vanilla.js`
+`With Vanilla.js`
 
 
-_What have I learned in this couse?_
+🎯 _What have I learned in this couse?_
 * DOM manipulation
 * Difference between Node object and Element object
 
